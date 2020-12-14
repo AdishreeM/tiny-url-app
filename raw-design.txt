@@ -1,0 +1,10 @@
+TinyUrl App will encode urls into short tokens, and decode tokens to get actual url.
+
+Here, 2 kinds of requests will be entertained:
+    - Generating token for an url using form
+        -- I/p: www.google.com/search?q=tinyurl&rlz=1C1GCEA_enIN876IN876
+        -- O/p: www.tinyurl/xcds12qwe (Generated token is xcds12qwe)
+    - Redirecting to url on receiving token
+        -- Hitting www.tinyurl/xcds12qwe will redirect to www.google.com/search?q=tinyurl&rlz=1C1GCEA_enIN876IN876
+
+We need to maintain a database (and cache) to store the tokens generated for a url.
